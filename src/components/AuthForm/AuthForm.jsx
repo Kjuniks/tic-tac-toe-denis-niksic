@@ -48,17 +48,19 @@ function AuthForm() {
             setLoading(true)
 
             const response = await authenticateUser(authMode, credentials);
-            if (response.status === 200) {
+
+            //when the user successfully makes an account, returned data is empty string "". When user LOGIN it returns an object
+            //with that being said, when response.data is "" (empty string), we redirect the user to log in, because API doesnt support automatic log in after registration
+            if (response.data !== "") {
                 setAuthorizationToken(response.data.token)
                 dispatch(setUserData(response.data))
                 navigate("/home")
             } else {
-                const errorData = response.data
-                console.error(errorData)
+                changeAuthMode("login")
             }
         } catch (error) {
             console.error("Auth error:", error)
-            setAuthErrorMessage("Wrong username or password!")
+            setAuthErrorMessage("Something went wrong!")
         } finally {
             setLoading(false);
         }
