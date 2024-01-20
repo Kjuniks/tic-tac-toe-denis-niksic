@@ -52,5 +52,7 @@ Clone the repository: git clone <repository-url>
 Install dependencies: npm install
 Start the development server: npm run dev
 Open the application in your browser at http://localhost:5173
+
+Or check hosted version at https://ttt-dn.web.app/
 # Conclusion
 This documentation provides a brief overview of the Tic Tac Toe project, highlighting the technologies used, project structure, key features, and instructions for getting started. For more detailed information, refer to the codebase and comments within the source files.
