@@ -5,7 +5,6 @@ import theme from "./styles/Theme"
 import { ThemeProvider } from "styled-components"
 import GlobalStyles from "./styles/Global"
 import { TimeNowProvider } from "./contexts/TimeNow"
-import ParticlesEffect from "./components/ParticlesEffect/ParticlesEffect"
 
 function App() {
 
@@ -14,7 +13,6 @@ function App() {
       <TimeNowProvider>
         <ThemeProvider theme={theme}>
           <GlobalStyles />
-          <ParticlesEffect />
           <Routes>
             <Route path="/" element={<Auth />} />
             <Route path="/home" element={<Home />} />
