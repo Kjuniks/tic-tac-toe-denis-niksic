@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { popAnimation } from "../../styles/Common";
 
 export const StyledGameBoard = styled.div`
 position: relative;
@@ -16,6 +17,8 @@ margin-bottom: 8px;
         width: 100%;
         margin-top: 20px;
   }
+
+  animation: ${popAnimation} 300ms ease-out;
 `
 
 export const GridRow = styled.div`

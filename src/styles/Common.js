@@ -1,4 +1,28 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+export const fadeInAnimation = keyframes`
+from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+`;
+
+export const popAnimation = keyframes`
+0% {
+  scale: 0.9;
+}
+60% {
+  scale: 1.08;
+}
+100% {
+  scale: 1;
+}
+`;
+
 
 export const ContainerRow = styled.div`
     width: 1100px;
@@ -27,6 +51,8 @@ export const Title = styled.h1`
     @media (max-width: ${({ theme }) => theme.mobile.small}) {
         font-size: 26px;
   }
+
+  animation: ${fadeInAnimation} 1000ms ease;
 `
 
 export const Button = styled.button`

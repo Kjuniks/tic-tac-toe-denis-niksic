@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fadeInAnimation } from "../../styles/Common";
 
 export const GameItemList = styled.ul`
     flex: 1;
@@ -14,6 +15,7 @@ export const GameItemList = styled.ul`
     @media (max-width: ${({ theme }) => theme.mobile.phone}) {
         margin-top: 14px;
   }
+  animation: ${fadeInAnimation} 200ms ease;
 `
 
 export const GameItem = styled.div`

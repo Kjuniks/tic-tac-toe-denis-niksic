@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fadeInAnimation } from "../../styles/Common";
 
 export const StyledGameBoardInfo = styled.section`
     display: flex;
@@ -13,6 +14,7 @@ export const StyledGameBoardInfo = styled.section`
   @media (max-width: ${({ theme }) => theme.mobile.phone}) {
         width: 100%;
   }
+  animation: ${fadeInAnimation} 300ms ease;
 `
 
 export const StyledGameBoardInfoWrapper = styled.div`

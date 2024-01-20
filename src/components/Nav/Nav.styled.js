@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { fadeInAnimation } from "../../styles/Common";
 
 export const StyledNav = styled.nav`
     width: 1100px;
@@ -37,4 +38,6 @@ export const StyledNav = styled.nav`
     @media (max-width: ${({ theme }) => theme.mobile.small}) {
         flex-direction: column;
   }
+
+  animation: ${fadeInAnimation} 400ms ease;
 `
