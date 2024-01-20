@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { fadeInAnimation } from "../../styles/Common"
 
 export const StyledForm = styled.form`
     width: 100%;
@@ -10,6 +11,7 @@ export const StyledForm = styled.form`
         flex-direction: column;
         margin-bottom: 20px;
     }
+    animation: ${fadeInAnimation} 1000ms ease;
 `
 
 export const StyledLabel = styled.label`
